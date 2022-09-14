@@ -53,4 +53,4 @@ Now the selection of "LOGIN AS AN USER" will popup this window
 
 </h4>
 
-To check other functionalities.... Just Run The Code
+* To check other functionalities.... Just Run The Code
