@@ -620,8 +620,8 @@ def Password():
     a_id = admin_id.get()
     a_pass = admin_pass.get()
 
-    admin = "4"
-    code = "a"
+    admin = "412002"
+    code = "ambivert"
 
 
     if(a_id=="" or a_pass==""):
