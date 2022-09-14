@@ -1,4 +1,4 @@
-# Library-Mgmt-System_GUI
+# e-Pustakalay
 
 The GUI based program on Library Management System using python-tkinter module and uses the MySQL for the database purpose.
 <hr>
