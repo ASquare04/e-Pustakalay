@@ -28,7 +28,7 @@ cursor = db1.cursor()
 # cursor.execute(str1)
 
 #---------SQL QUERIES TO CREATE REQUIRED TABLES IN DATABASE 
-#----------------------CAN BE EASILY DONE THROUGH ACCESSING THE MySQL Cmd Client
+#----------------------CAN BE EASILY DONE THROUGH ACCESSING THE MySQL Command Client
 
 u_id,u_name,u_author,u_category,u_qnt,u_mrp=None,None,None,None,None,None
 v_scourse,v_id,v_sname,v_date,v_rett,v_fine,v_iss=None,None,None,None,None,None,None
@@ -723,9 +723,9 @@ def UserPanel():
     Label(panel, text = "USER PANEL", font= "ComicSansms 12 bold", pady=5,bg = "azure").pack(side=TOP)
     Label(panel, text = "Select From The Operations Below", font= "SansSerif 12 ",pady=20,bg = "azure").pack()
 
-    Button(panel, text = "VIEW ALL BOOK",command=AvailBooks, width = 16, borderwidth=5 , fg = "white" , bg = "green" ).place(x=70,y=130,)
-    Button(panel, text = "ISSUE A BOOK",command=IssueBooks, width = 16, borderwidth=5 , fg = "white" , bg = "blue" ).place(x=250,y=130)
-    Button(panel, text = "RETURN A BOOK",command=ReturnBooks, width = 16, borderwidth=5 , fg = "white" , bg = "orange" ).place(x=430,y=130)
+    Button(panel, text = "VIEW ALL BOOK",command=AvailBooks, width = 16, borderwidth=8 , fg = "white" , bg = "green" ).place(x=70,y=130,)
+    Button(panel, text = "ISSUE A BOOK",command=IssueBooks, width = 16, borderwidth=8 , fg = "white" , bg = "blue" ).place(x=250,y=130)
+    Button(panel, text = "RETURN A BOOK",command=ReturnBooks, width = 16, borderwidth=8 , fg = "white" , bg = "orange" ).place(x=430,y=130)
 
     panel.mainloop()
 
