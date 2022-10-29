@@ -18,8 +18,8 @@ cursor = db1.cursor()
 
 #----------CONNECT WITH THE DATABASE EPUSTAKALAY
 
-#str = "Create Table Books(B_Id Varchar(4) , B_Name Varchar(30) , B_Author Varchar(30) , B_Category Varchar (30) , B_Quantity Int(5), B_Price Float(5,2))"
-#cursor.execute(str)
+# str = "Create Table Books(B_Id Varchar(4) , B_Name Varchar(30) , B_Author Varchar(30) , B_Category Varchar (30) , B_Quantity Int(5), B_Price Float(5,2))"
+# cursor.execute(str)
 
 # str = "Create Table Issue( Course_Id Int(4), B_Id Varchar(4), Student_Name Varchar(30), Issue_Date Varchar(30), Return_Date Varchar(30))"
 # cursor.execute(str)
@@ -384,6 +384,7 @@ def Ret():
 
     global crs_id
     crs_id = c_id.get()
+    course = int(crs_id)
 
     if(crs_id==""):
         messagebox.showwarning("Mandatory Field*","Course ID Required")
@@ -394,7 +395,7 @@ def Ret():
         show = cursor.fetchall()
         
         for i in show:
-            if crs_id==i[0]: 
+            if course == i[0]:
                 messagebox.showinfo("Pending","Book Is Issued On This ID")
                 response = messagebox.askquestion("Return","Do You Want To Return")
                 if response =="yes":
@@ -493,7 +494,7 @@ def ReturnBooks():
     c_id = Entry(root,borderwidth=3,relief=SUNKEN)
     c_id.place(x=280,y=60)
 
-    ret = Button(root, text = "Search ID",width = 14,command=Ret, bg = "lawn green", fg = "white" , borderwidth=3,)
+    ret = Button(root, text = "Search ID",width = 14,command=Ret, bg = "green", fg = "white" , borderwidth=3,)
     ret.place(x=120,y=120)
 
     ex = Button(root,text = "Exit OUT" ,width = 14, command=lambda:[root.destroy(), panel.deiconify()], bg = "red", fg = "white" , borderwidth=3)
@@ -745,10 +746,10 @@ def Main():
     Label(display, text = "Welcome To The World Of Wisdom", font= "SansSerif 14 italic", pady = 10,bg = "azure").pack(side=TOP)
     Label(display, text = "Please Select Your User Profile !", font= "ComicSansms 12", pady =60,bg = "azure").pack()
 
-    user = Button(display, text = "LOGIN AS AN USER", width = 18,font = 'sans 10 bold',command=UserPanel, fg = "white", bg = "chartreuse2", borderwidth=5)
+    user = Button(display, text = "LOGIN AS AN USER", width = 18,font = 'sans 10 bold',command=UserPanel, fg = "black", bg = "chartreuse2", borderwidth=5)
     user.place(x=305,y=220)
 
-    admin = Button(display, text = "LOGIN AS AN ADMIN",width = 18,font = 'sans 10 bold',command=Admin, fg = "white", bg = "deepskyblue2" , borderwidth=5)
+    admin = Button(display, text = "LOGIN AS AN ADMIN",width = 18,font = 'sans 10 bold',command=Admin, fg = "black", bg = "deepskyblue2" , borderwidth=5)
     admin.place(x=305,y=280)
 
     Label(display, text = "Copyright 2022. All Rights Reserved To The Creator",bg = "azure", font= "ComicSansms 8", pady = 5).pack(side=BOTTOM)
