@@ -152,6 +152,7 @@ def D():
                         d_id.delete(0, 'end')
                 else:
                         d_id.delete(0,'end')
+                break          
             else:
                 messagebox.showerror("Error","No Such Record")
                 d_id.delete(0,'end')
@@ -348,6 +349,7 @@ def Iss():
         
                 else:
                     i_id.delete(0,'end')
+                break
             else:
                 messagebox.showerror("Error","Book Is Not Available")
                 i_id.delete(0,'end')
@@ -471,6 +473,7 @@ def Ret():
                         g.configure(state='disabled')
                     else:
                         c_id.delete(0,'end')
+                break
             else:
                 c_id.delete(0,'end')
                 messagebox.showinfo("Clear","No Book Is Issued To You")
